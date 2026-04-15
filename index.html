@@ -41,15 +41,15 @@
 
   /* HERO */
   #hero { 
-    padding: 14rem 6% 6rem;
+    padding: 12rem 6% 6rem;
     border-bottom: 1px solid var(--border);
   }
   .hero-container { max-width: 1400px; margin: 0 auto; }
-  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(5rem, 15vw, 12rem); line-height: 0.8; margin-bottom: 2.5rem; letter-spacing: -0.05em; }
-  .hero-headline { font-size: clamp(1rem, 2.5vw, 1.5rem); text-transform: uppercase; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 4rem; font-weight: 700; }
+  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.03em; }
+  .hero-headline { font-size: clamp(0.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 3.5rem; font-weight: 700; }
   
-  .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: start; }
-  .hero-desc { font-size: 1.4rem; color: var(--text-dim); line-height: 1.6; font-weight: 300; }
+  .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
+  .hero-desc { font-size: 1.3rem; color: var(--text-dim); line-height: 1.6; font-weight: 300; }
   .hero-desc strong { color: var(--text-main); font-weight: 500; }
 
   /* EXECUTIVE STATS */
@@ -65,36 +65,35 @@
   .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 3rem; display: block; }
   
   /* SUMMARY SECTION */
-  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
-  .summary-title { font-family: 'Playfair Display', serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 2rem; }
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
+  .summary-title { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1.1; margin-bottom: 2rem; }
   .summary-text p { font-size: 1.15rem; color: var(--text-dim); margin-bottom: 1.5rem; font-weight: 300; }
 
   /* PILLAR GRID */
   .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
   .pillar-card { background: var(--surface); padding: 3rem; border: 1px solid var(--border); }
-  .pillar-card h3 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .pillar-card h3 { font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
   .pillar-card p { font-size: 0.9rem; color: var(--text-dim); font-weight: 300; }
 
   /* EXPERIENCE ROW */
-  .career-row { display: grid; grid-template-columns: 300px 1fr; padding: 4rem 0; border-top: 1px solid var(--border); }
+  .career-row { display: grid; grid-template-columns: 250px 1fr; padding: 4rem 0; border-top: 1px solid var(--border); }
   .career-year { font-weight: 700; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.1em; }
-  .career-body h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.5rem; }
-  .career-body h4 { font-size: 1rem; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
-  .career-body p { font-size: 1.1rem; color: var(--text-dim); margin-bottom: 2rem; max-width: 800px; }
+  .career-body h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.5rem; }
+  .career-body h4 { font-size: 0.9rem; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .career-body p { font-size: 1.05rem; color: var(--text-dim); margin-bottom: 2rem; max-width: 850px; }
   
-  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-  .tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.5rem 1.2rem; border: 1px solid var(--border); color: var(--text-dim); border-radius: 50px; }
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .tag { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border: 1px solid var(--border); color: var(--text-dim); border-radius: 50px; }
 
   /* FOOTER */
   footer { padding: 6rem 6%; background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
-  .contact-link { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 4rem); text-decoration: none; color: var(--accent); display: block; margin-bottom: 2rem; transition: 0.3s; }
+  .contact-link { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 4vw, 3.5rem); text-decoration: none; color: var(--accent); display: block; margin-bottom: 2rem; transition: 0.3s; }
   .contact-link:hover { color: var(--gold); }
 
   @media (max-width: 1000px) {
     .hero-grid, .summary-grid, .career-row, .stats-container, .pillar-grid { grid-template-columns: 1fr; }
     .stat-box { border-right: none; border-bottom: 1px solid var(--border); }
     .nav-links { display: none; }
-    .hero-name { font-size: 5rem; line-height: 1; }
   }
 </style>
 </head>
@@ -119,7 +118,7 @@
         Enterprise infrastructure executive shaping how <strong>mission-critical environments scale with discipline, resilience, and executive clarity.</strong> Brings a rare blend of data center operations, governance, portfolio planning, audit readiness, and business strategy—translating complex infrastructure decisions into measurable business outcomes.
       </p>
       <div style="text-align: right;">
-        <img src="profile.jpeg" alt="Saurabh Tiwari" style="width: 320px; filter: grayscale(100%); border: 1px solid var(--border);">
+        <img src="profile.jpeg" alt="Saurabh Tiwari" style="width: 280px; filter: grayscale(100%); border: 1px solid var(--border);">
       </div>
     </div>
   </div>
@@ -175,17 +174,18 @@
 
 <section class="section" id="experience">
   <span class="label">Career Experience</span>
-  <h2 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1.5rem;">The Architecture of Scale.</h2>
-  <p style="color: var(--text-dim); margin-bottom: 5rem; font-size: 1.2rem; font-weight: 300;">A progression from operational rigor into enterprise governance and strategic infrastructure decision-making.</p>
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1.5rem;">The Architecture of Scale.</h2>
+  <p style="color: var(--text-dim); margin-bottom: 5rem; font-size: 1.1rem; font-weight: 300;">A progression from operational rigor into enterprise governance and strategic infrastructure decision-making.</p>
 
   <div class="career-row">
     <div class="career-year">2022 — PRESENT</div>
     <div class="career-body">
       <h3>Visa Inc.</h3>
       <h4>Director, Lead Business Planning – DCEO Business Operations</h4>
-      <p>Leads global data center portfolio strategy, governance, and expansion planning across enterprise infrastructure environments. Shapes investment decisions, operating standards, and risk frameworks that improve portfolio visibility and execution discipline at scale.</p>
+      <p>Leads global data center portfolio strategy, governance, and expansion planning across enterprise infrastructure environments. Shapes investment decisions, operating standards, commercial governance, and risk frameworks that improve portfolio visibility and execution discipline at scale.</p>
       <div class="tag-cloud">
-        <div class="tag">Global Governance</div><div class="tag">Expansion Strategy</div><div class="tag">Executive Decision Support</div>
+        <div class="tag">Global Governance</div><div class="tag">Expansion Strategy</div><div class="tag">Contract & SLA Leadership</div>
+        <div class="tag">Risk & Compliance</div><div class="tag">Executive Decision Support</div>
       </div>
     </div>
   </div>
@@ -195,9 +195,9 @@
     <div class="career-body">
       <h3>Visa Inc.</h3>
       <h4>Director, India & Turkey – Data Center Delivery & Operations</h4>
-      <p>Directed Tier III+ data center operations across India and Turkey supporting regional enterprise workloads. Led multi-site delivery and operations with 100% uptime performance while scaling cross-regional engineering capability.</p>
+      <p>Directed Tier III+ data center operations across India and Turkey supporting regional enterprise workloads. Led multi-site delivery and operations with 100% SLA and uptime performance while scaling cross-regional engineering capability and operational consistency.</p>
       <div class="tag-cloud">
-        <div class="tag">Tier III+ Operations</div><div class="tag">100% SLA</div><div class="tag">Operational Scale</div>
+        <div class="tag">Tier III+ Operations</div><div class="tag">100% SLA</div><div class="tag">Cross-Regional Leadership</div><div class="tag">Operational Scale</div>
       </div>
     </div>
   </div>
@@ -207,9 +207,9 @@
     <div class="career-body">
       <h3>Visa Inc.</h3>
       <h4>Data Center Manager – Singapore & Indonesia</h4>
-      <p>Managed mission-critical operations across regional facilities while delivering new colocation capacity and optimizing portfolio efficiency. Achieved zero SLA violations across 3 facilities while delivering $750K annual OpEx savings.</p>
+      <p>Managed mission-critical operations across regional facilities while delivering new colocation capacity and optimizing portfolio efficiency. Combined operational resilience with financial discipline, including significant savings through footprint rationalization during a volatile period.</p>
       <div class="tag-cloud">
-        <div class="tag">Regional Operations</div><div class="tag">Colocation Delivery</div><div class="tag">Cost Optimization</div>
+        <div class="tag">Regional Operations</div><div class="tag">Colocation Delivery</div><div class="tag">Cost Optimization</div><div class="tag">Business Continuity</div>
       </div>
     </div>
   </div>
@@ -221,7 +221,7 @@
       <h4>Staff Systems Engineer – Operations & Infrastructure</h4>
       <p>Helped establish world-class operating maturity across data center environments. Achieved 100% Uptime Institute M&O certification scores across three mission-critical centers—a distinction held by fewer than 5% of centers worldwide.</p>
       <div class="tag-cloud">
-        <div class="tag">Uptime M&O Excellence</div><div class="tag">Operational Standards</div><div class="tag">Workforce Planning</div>
+        <div class="tag">Uptime M&O Excellence</div><div class="tag">Operational Standards</div><div class="tag">Workforce Planning</div><div class="tag">Process Governance</div>
       </div>
     </div>
   </div>
@@ -231,9 +231,9 @@
     <div class="career-body">
       <h3>Visa Inc.</h3>
       <h4>Business Process Engineer – US Data Centers</h4>
-      <p>Drove 15% operational efficiency improvements through automated KPI and incident analytics. Led enterprise-wide asset audits across 5,000+ assets to increase data accuracy to 90%+.</p>
+      <p>Drove 15% operational efficiency improvements through automated KPI and incident analytics. Led enterprise-wide asset audits across 5,000+ assets to increase asset data accuracy to 90%+.</p>
       <div class="tag-cloud">
-        <div class="tag">KPI Analytics</div><div class="tag">Process Improvement</div><div class="tag">Asset Governance</div>
+        <div class="tag">KPI Analytics</div><div class="tag">Process Improvement</div><div class="tag">Asset Governance</div><div class="tag">Operational Visibility</div>
       </div>
     </div>
   </div>
