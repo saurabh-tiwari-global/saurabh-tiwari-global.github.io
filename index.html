@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saurabh Tiwari | Infrastructure Executive</title>
+  <title>Saurabh Tiwari | Global Infrastructure Executive</title>
   
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
@@ -17,6 +17,7 @@
       --text-dim: #808080;
       --text-main: #ffffff;
       --gold: #d4af37;
+      --pill-bg: #1a160d; /* Warm dark gold for pills */
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,12 +25,10 @@
       font-family: 'Inter', sans-serif; 
       background-color: var(--bg); 
       color: var(--text-main); 
-      line-height: 1.5;
-      letter-spacing: -0.01em;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
-    /* NAVIGATION */
     nav { 
       position: fixed; top: 0; width: 100%; z-index: 1000; 
       background: rgba(5, 5, 5, 0.9); 
@@ -43,73 +42,50 @@
     .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; margin-left: 2rem; transition: 0.3s; }
     .nav-links a:hover { color: var(--accent); }
 
-    /* HERO */
-    #hero { padding: 12rem 6% 6rem; border-bottom: 1px solid var(--border); }
-    .hero-container { max-width: 1400px; margin: 0 auto; }
-    .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 1; margin-bottom: 2rem; letter-spacing: -0.03em; }
-    .hero-headline { font-size: clamp(0.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 3.5rem; font-weight: 700; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
-    .hero-desc { font-size: 1.3rem; color: var(--text-dim); line-height: 1.6; font-weight: 300; }
-    .hero-desc strong { color: var(--text-main); font-weight: 500; }
+    .section { padding: 10rem 6% 6rem; max-width: 1400px; margin: 0 auto; }
+    .label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 1rem; display: block; }
 
-    /* STATS STRIP */
-    .stats-strip { background: var(--surface); border-bottom: 1px solid var(--border); }
-    .stats-container { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1400px; margin: 0 auto; }
-    .stat-box { padding: 4rem 2rem; border-right: 1px solid var(--border); text-align: center; }
-    .stat-box:last-child { border-right: none; }
-    .stat-val { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--gold); margin-bottom: 0.5rem; }
-    .stat-lab { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-dim); line-height: 1.4; }
+    /* TWO-COLUMN LAYOUT LIKE UPLOADED IMAGE */
+    .about-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: start; }
+    .about-main h1 { font-family: 'Playfair Display', serif; font-size: 4rem; line-height: 1.1; margin-bottom: 2.5rem; border-left: 4px solid var(--gold); padding-left: 2rem; }
+    .about-main p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2rem; font-weight: 300; }
+    .about-main strong { color: var(--text-main); font-weight: 500; }
 
-    /* CONTENT SECTIONS */
-    .section { padding: 8rem 6%; max-width: 1400px; margin: 0 auto; }
-    .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 3rem; display: block; }
-    
-    /* SUMMARY SECTION */
-    .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; }
-    .summary-title { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1.1; margin-bottom: 2rem; }
-    .summary-text p { font-size: 1.15rem; color: var(--text-dim); margin-bottom: 1.5rem; font-weight: 300; }
+    /* PILLS STYLE */
+    .pill-container { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 3rem; }
+    .skill-pill { 
+      background: var(--pill-bg); 
+      border: 1px solid #2d2616; 
+      color: #e0cc9b; 
+      padding: 0.6rem 1.2rem; 
+      border-radius: 50px; 
+      font-size: 0.85rem; 
+      font-weight: 500; 
+    }
 
-    /* PILLAR GRID */
-    .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-    .pillar-card { background: var(--surface); padding: 3rem; border: 1px solid var(--border); }
-    .pillar-card h3 { font-size: 1.1rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
-    .pillar-card p { font-size: 0.9rem; color: var(--text-dim); font-weight: 300; }
+    /* EDUCATION SIDEBAR STYLE */
+    .edu-sidebar h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 2rem; color: var(--text-main); }
+    .edu-item { border-left: 3px solid var(--gold); padding-left: 1.5rem; margin-bottom: 2.5rem; }
+    .edu-item h4 { font-size: 1rem; margin-bottom: 0.3rem; color: var(--text-main); }
+    .edu-item p { font-size: 0.9rem; color: var(--text-dim); }
 
-    /* CAREER ROWS */
-    .career-row { display: grid; grid-template-columns: 250px 1fr; padding: 4rem 0; border-top: 1px solid var(--border); }
-    .career-year { font-weight: 700; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.1em; }
-    .career-body h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 0.5rem; }
-    .career-body h4 { font-size: 0.9rem; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
-    .career-body p { font-size: 1.05rem; color: var(--text-dim); margin-bottom: 2rem; max-width: 850px; }
-    .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-    .tag { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.4rem 1rem; border: 1px solid var(--border); color: var(--text-dim); border-radius: 50px; }
-
-    /* EARLIER CAREER LIST */
-    .earlier-career-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; margin-top: 2rem; }
-    .earlier-item { border-left: 1px solid var(--gold); padding-left: 1.5rem; }
-    .earlier-item h5 { font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--text-main); }
-    .earlier-item span { font-size: 0.7rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; display: block; margin-bottom: 1rem; }
-    .earlier-item p { font-size: 0.9rem; color: var(--text-dim); font-weight: 300; line-height: 1.6; }
-
-    /* CREDENTIALS SECTION */
-    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem; }
-    .cert-group h4 { color: var(--gold); font-size: 0.7rem; letter-spacing: 0.1em; margin-bottom: 1rem; text-transform: uppercase; }
-    .cert-item { font-size: 0.95rem; margin-bottom: 0.4rem; color: var(--text-dim); font-weight: 300; }
+    /* EXPERIENCE ROWS */
+    .career-row { display: grid; grid-template-columns: 200px 1fr; padding: 4rem 0; border-top: 1px solid var(--border); }
+    .career-year { font-weight: 700; font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; }
+    .career-body h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .career-body h4 { font-size: 0.9rem; color: var(--text-main); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+    .career-body p { font-size: 1.05rem; color: var(--text-dim); margin-bottom: 1rem; max-width: 850px; }
 
     /* FOOTER */
     footer { padding: 8rem 6%; background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
     .contact-grid { display: flex; justify-content: center; gap: 4rem; margin: 3.5rem 0; }
     .contact-item { text-decoration: none; color: var(--text-dim); transition: 0.3s; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
     .contact-item i { font-size: 2.2rem; }
-    .contact-item span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; font-weight: 600; }
     .contact-item:hover { color: var(--gold); transform: translateY(-5px); }
-    .footer-location { color: var(--text-dim); letter-spacing: 0.15em; font-size: 0.75rem; opacity: 0.5; margin-top: 4rem; }
 
     @media (max-width: 1000px) {
-      .hero-grid, .summary-grid, .career-row, .stats-container, .pillar-grid, .cert-grid { grid-template-columns: 1fr; }
-      .stat-box { border-right: none; border-bottom: 1px solid var(--border); }
-      .nav-links { display: none; }
-      .contact-grid { gap: 2rem; }
+      .about-container, .career-row { grid-template-columns: 1fr; gap: 4rem; }
+      .about-main h1 { font-size: 3rem; }
     }
   </style>
 </head>
@@ -120,60 +96,77 @@
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
-    <li><a href="#credentials">Credentials</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<section id="hero">
-  <div class="hero-container">
-    <div class="hero-headline">Global Data Center Governance, Strategy & Operations</div>
-    <h1 class="hero-name">Saurabh Tiwari</h1>
-    <div class="hero-grid">
-      <p class="hero-desc">
-        Enterprise infrastructure executive shaping how <strong>mission-critical environments scale with discipline, resilience, and executive clarity.</strong> Translating complex infrastructure decisions into measurable business outcomes.
-      </p>
-      <div style="text-align: right;">
-        <img src="profile.jpeg" alt="Saurabh Tiwari" style="width: 280px; filter: grayscale(100%); border: 1px solid var(--border);">
+<section class="section" id="about">
+  <div class="about-container">
+    <div class="about-main">
+      <span class="label">About Me</span>
+      <h1>Strategy Meets Execution</h1>
+      
+      <p>I am a results-driven IT and data center leader with over 15 years of global experience spanning North America, APAC, and EMEA. My work sits at the intersection of infrastructure strategy, governance, and operations—translating complex technical environments into scalable, audit-ready, and business-aligned systems.</p>
+
+      <p>At Visa, I have led everything from hyperscale expansion programs across four continents to building operational frameworks used by teams worldwide. I take pride in maintaining <strong>100% uptime</strong>, building psychologically safe teams, and making infrastructure investments that align with long-term business goals.</p>
+
+      <p>I believe great leadership means being equally fluent in a boardroom and a data center floor—and I've spent my career proving it.</p>
+
+      <div class="pill-container">
+        <div class="skill-pill">IT Strategy & Governance</div>
+        <div class="skill-pill">Global DC Operations</div>
+        <div class="skill-pill">Audit & Compliance</div>
+        <div class="skill-pill">Program Management</div>
+        <div class="skill-pill">Vendor Negotiations</div>
+        <div class="skill-pill">Business Analytics</div>
+        <div class="skill-pill">Executive Reporting</div>
+        <div class="skill-pill">Capacity Planning</div>
+        <div class="skill-pill">Risk & Resiliency</div>
+        <div class="skill-pill">Cross-Functional Leadership</div>
+      </div>
+    </div>
+
+    <div class="edu-sidebar">
+      <h3>Education</h3>
+      <div class="edu-item">
+        <h4>MBA — with High Honors</h4>
+        <p>Boston University, Questrom School of Business</p>
+      </div>
+      <div class="edu-item">
+        <h4>MS, Industrial Engineering</h4>
+        <p>Southern Illinois University Edwardsville</p>
+      </div>
+      <div class="edu-item">
+        <h4>BS, Manufacturing Engineering</h4>
+        <p>Brigham Young University</p>
+      </div>
+
+      <h3 style="margin-top: 4rem;">Executive Education</h3>
+      <div class="edu-item">
+        <h4>Harvard Business School</h4>
+        <p>CORe — Business Analytics, Economics, Financial Accounting</p>
+      </div>
+      <div class="edu-item">
+        <h4>INSEAD</h4>
+        <p>Leading in a Transforming World</p>
+      </div>
+      <div class="edu-item">
+        <h4>UT Austin</h4>
+        <p>Post Graduate Program in Data Science & Business Analytics</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stats-strip">
-  <div class="stats-container">
-    <div class="stat-box">
-      <div class="stat-val">15+</div>
-      <div class="stat-lab">Years in Global<br>Infrastructure</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-val">100%</div>
-      <div class="stat-lab">Uptime and Compliance<br>Track Record</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-val">3 / 6+</div>
-      <div class="stat-lab">Regions Led /<br>Global Markets</div>
-    </div>
-    <div class="stat-box">
-      <div class="stat-val">11+</div>
-      <div class="stat-lab">Years at Visa Building<br>Global Capability</div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="experience">
+<section class="section" id="experience" style="padding-top: 4rem;">
   <span class="label">Career Experience</span>
-  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1.5rem;">The Architecture of Scale.</h2>
   
   <div class="career-row">
     <div class="career-year">2022 — PRESENT</div>
     <div class="career-body">
       <h3>Visa Inc.</h3>
       <h4>Director, Lead Business Planning – DCEO Business Operations</h4>
-      <p>Leads global data center portfolio strategy and governance. Shapes investment decisions, operating standards, and risk frameworks that improve execution discipline at scale.</p>
-      <div class="tag-cloud">
-        <div class="tag">Global Governance</div><div class="tag">Expansion Strategy</div><div class="tag">Risk & Compliance</div>
-      </div>
+      <p>Directs global data center portfolio strategy, commercial governance, and expansion planning. Shapes investment decisions and risk frameworks that improve execution discipline for Visa’s enterprise infrastructure.</p>
     </div>
   </div>
 
@@ -183,68 +176,6 @@
       <h3>Visa Inc.</h3>
       <h4>Business Process Engineer – US Data Centers</h4>
       <p>Drove 15% operational efficiency gains through automated KPI analytics using Tableau, Splunk, and SAP. Led an audit of 5,000+ assets across mission-critical facilities, improving data accuracy to 90%+.</p>
-      <div class="tag-cloud">
-        <div class="tag">Tableau & Splunk</div><div class="tag">15% Efficiency Gain</div><div class="tag">Asset Governance</div>
-      </div>
-    </div>
-  </div>
-
-  <div style="margin-top: 6rem;">
-    <span class="label">Earlier Career Foundations</span>
-    <div class="earlier-career-grid">
-      <div class="earlier-item">
-        <h5>Assistant NOC Manager</h5>
-        <span>BYU Office of IT | 2009 – 2012</span>
-        <p>Led 24/7 support for 5,000+ servers; trained 50+ staff and managed major incident resolution using ITIL framework.</p>
-      </div>
-      <div class="earlier-item">
-        <h5>Optimization Engineer (Prof Intern)</h5>
-        <span>Longview Fibre Paper & Packaging | 2012 – 2013</span>
-        <p>Delivered $500K annual savings (18%) via ink optimization and reduced energy costs by 66% through DeSuperheater implementation.</p>
-      </div>
-      <div class="earlier-item">
-        <h5>Research & Teaching Assistant</h5>
-        <span>SIU Edwardsville | 2013 – 2015</span>
-        <p>Built intelligent decision support systems using VBA for production planning and demand forecasting.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="credentials">
-  <span class="label">Credentials & Expertise</span>
-  <div class="summary-grid">
-    <div class="career-body">
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem;">Education & Executive Education</h3>
-      <div style="margin-bottom: 1.5rem;"><h4 style="color: var(--gold);">MBA</h4><p>Boston University</p></div>
-      <div style="margin-bottom: 1.5rem;"><h4 style="color: var(--gold);">MS, Industrial Engineering</h4><p>SIU Edwardsville</p></div>
-      <div style="margin-bottom: 1.5rem;"><h4 style="color: var(--gold);">BS, Manufacturing Engineering</h4><p>Brigham Young University</p></div>
-      <div><h4 style="color: var(--gold);">Executive Education</h4><p>HBS · INSEAD · UT Austin</p></div>
-    </div>
-
-    <div class="career-body">
-      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem;">Certifications & Expertise</h3>
-      <div class="cert-grid">
-        <div class="cert-group">
-          <h4>Data Center</h4>
-          <div class="cert-item">Uptime Institute ATS & AOS</div>
-          <div class="cert-item">CDCMP (Management)</div>
-          <div class="cert-item">CDCDP (Design)</div>
-        </div>
-        <div class="cert-group">
-          <h4>Methodology</h4>
-          <div class="cert-item">ITIL® Foundation</div>
-          <div class="cert-item">Six Sigma Green Belt</div>
-          <div class="cert-item">Scrum Product Owner (CSPO)</div>
-        </div>
-      </div>
-      <div style="margin-top: 2rem;">
-        <div class="tag-cloud">
-          <div class="tag" style="border-color: var(--gold); color: var(--gold);">PCI-DSS</div>
-          <div class="tag" style="border-color: var(--gold); color: var(--gold);">SOC 1/2</div>
-          <div class="tag" style="border-color: var(--gold); color: var(--gold);">SSAE 18/21</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
