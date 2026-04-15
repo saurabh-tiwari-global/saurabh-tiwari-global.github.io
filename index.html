@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Saurabh Tiwari | Global Infrastructure Strategy</title>
+<title>Saurabh Tiwari | Infrastructure Executive</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
   
   :root {
-    --bg: #0a0a0a;
-    --surface: #121212;
-    --border: #262626;
+    --bg: #050505;
+    --surface: #0f0f0f;
+    --border: #1a1a1a;
     --accent: #ffffff;
-    --text-dim: #909090;
+    --text-dim: #808080;
     --text-main: #ffffff;
+    --gold: #d4af37;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,68 +22,78 @@
     font-family: 'Inter', sans-serif; 
     background-color: var(--bg); 
     color: var(--text-main); 
-    line-height: 1.6;
+    line-height: 1.5;
     letter-spacing: -0.01em;
   }
 
   /* NAVIGATION */
   nav { 
     position: fixed; top: 0; width: 100%; z-index: 1000; 
-    background: rgba(10, 10, 10, 0.8); 
-    backdrop-filter: blur(12px); 
-    padding: 1.5rem 6%; 
+    background: rgba(5, 5, 5, 0.9); 
+    backdrop-filter: blur(15px); 
+    padding: 1.2rem 6%; 
     display: flex; justify-content: space-between; align-items: center; 
     border-bottom: 1px solid var(--border); 
   }
-  .nav-logo { font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.2em; }
-  .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; margin-left: 2rem; transition: 0.3s; }
+  .nav-logo { font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold); }
+  .nav-links a { text-decoration: none; color: var(--text-dim); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; margin-left: 2rem; transition: 0.3s; }
   .nav-links a:hover { color: var(--accent); }
 
   /* HERO */
   #hero { 
-    min-height: 85vh; display: flex; align-items: center; padding: 0 8%; 
+    padding: 12rem 6% 6rem;
     border-bottom: 1px solid var(--border);
   }
-  .hero-container { width: 100%; max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; }
+  .hero-container { max-width: 1400px; margin: 0 auto; }
+  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(4rem, 12vw, 9rem); line-height: 0.85; margin-bottom: 2.5rem; letter-spacing: -0.04em; }
+  .hero-headline { font-size: clamp(1rem, 2.5vw, 1.5rem); text-transform: uppercase; letter-spacing: 0.25em; color: var(--gold); margin-bottom: 3rem; font-weight: 700; }
   
-  .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 6rem); line-height: 0.95; margin-bottom: 1.5rem; }
-  .hero-content h1 span { font-style: italic; font-weight: 400; opacity: 0.7; }
-  .hero-desc { font-size: 1.25rem; color: var(--text-dim); max-width: 600px; font-weight: 300; }
+  .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 6rem; align-items: start; }
+  .hero-desc { font-size: 1.4rem; color: var(--text-dim); line-height: 1.6; font-weight: 300; }
+  .hero-desc strong { color: var(--text-main); font-weight: 500; }
 
-  .profile-frame { width: 100%; aspect-ratio: 1/1; background: var(--surface); border: 1px solid var(--border); position: relative; overflow: hidden; }
-  .profile-frame img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%); transition: 0.5s; }
-  .profile-frame:hover img { filter: grayscale(0%); }
+  /* EXECUTIVE STATS */
+  .stats-strip { background: var(--surface); border-bottom: 1px solid var(--border); }
+  .stats-container { display: grid; grid-template-columns: repeat(4, 1fr); max-width: 1400px; margin: 0 auto; }
+  .stat-box { padding: 4rem 2rem; border-right: 1px solid var(--border); text-align: center; }
+  .stat-box:last-child { border-right: none; }
+  .stat-val { font-family: 'Playfair Display', serif; font-size: 3.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+  .stat-lab { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-dim); line-height: 1.4; }
 
-  /* BENTO METRICS */
-  .metrics { padding: 6rem 8%; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); }
-  .metric-item { background: var(--bg); padding: 3rem 2rem; text-align: center; }
-  .metric-item h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
-  .metric-item p { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-dim); }
-
-  /* STRATEGIC IMPACT */
-  .section { padding: 8rem 8%; max-width: 1200px; margin: 0 auto; }
-  .label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3em; color: var(--text-dim); margin-bottom: 2rem; display: block; }
+  /* CONTENT SECTIONS */
+  .section { padding: 8rem 6%; max-width: 1400px; margin: 0 auto; }
+  .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.4em; color: var(--gold); margin-bottom: 3rem; display: block; }
   
-  .impact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-  .impact-item h3 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
-  .impact-item p { color: var(--text-dim); margin-bottom: 2rem; font-weight: 300; }
+  /* SUMMARY SECTION */
+  .summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; }
+  .summary-title { font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 1.1; margin-bottom: 2rem; }
+  .summary-text p { font-size: 1.15rem; color: var(--text-dim); margin-bottom: 1.5rem; font-weight: 300; }
 
-  /* CAREER CHRONICLE */
-  .career-row { display: grid; grid-template-columns: 250px 1fr; padding: 3rem 0; border-top: 1px solid var(--border); }
-  .career-meta { font-size: 0.75rem; color: var(--text-dim); font-weight: 600; text-transform: uppercase; }
-  .career-body h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .career-body h4 { font-size: 0.9rem; color: var(--text-dim); margin-bottom: 1rem; font-weight: 400; }
-  .career-body ul { list-style: none; }
-  .career-body li { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 0.5rem; font-weight: 300; position: relative; padding-left: 1.5rem; }
-  .career-body li::before { content: "—"; position: absolute; left: 0; color: var(--border); }
+  /* PILLAR GRID */
+  .pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
+  .pillar-card { background: var(--surface); padding: 3rem; border: 1px solid var(--border); }
+  .pillar-card h3 { font-size: 1.2rem; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .pillar-card p { font-size: 0.9rem; color: var(--text-dim); font-weight: 300; }
+
+  /* EXPERIENCE ROW */
+  .career-row { display: grid; grid-template-columns: 300px 1fr; padding: 4rem 0; border-top: 1px solid var(--border); }
+  .career-year { font-weight: 700; font-size: 0.9rem; color: var(--text-dim); letter-spacing: 0.1em; }
+  .career-body h3 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 0.5rem; }
+  .career-body h4 { font-size: 1rem; color: var(--gold); margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  .career-body p { font-size: 1.1rem; color: var(--text-dim); margin-bottom: 2rem; max-width: 800px; }
+  
+  .tag-cloud { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+  .tag { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 0.5rem 1.2rem; border: 1px solid var(--border); color: var(--text-dim); border-radius: 50px; }
 
   /* FOOTER */
-  footer { padding: 4rem 8%; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-  .contact-btn { padding: 1rem 2rem; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; }
+  footer { padding: 6rem 6%; background: var(--surface); border-top: 1px solid var(--border); text-align: center; }
+  .contact-link { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 4rem); text-decoration: none; color: var(--accent); display: block; margin-bottom: 2rem; transition: 0.3s; }
+  .contact-link:hover { color: var(--gold); }
 
-  @media (max-width: 900px) {
-    .hero-container, .impact-grid, .career-row, .metrics { grid-template-columns: 1fr; }
-    .hero-content h1 { font-size: 3.5rem; }
+  @media (max-width: 1000px) {
+    .hero-grid, .summary-grid, .career-row, .stats-container, .pillar-grid { grid-template-columns: 1fr; }
+    .stat-box { border-right: none; border-bottom: 1px solid var(--border); }
+    .nav-links { display: none; }
   }
 </style>
 </head>
@@ -91,102 +102,150 @@
 <nav>
   <div class="nav-logo">Saurabh Tiwari</div>
   <ul class="nav-links">
-    <li><a href="#impact">Impact</a></li>
-    <li><a href="#history">History</a></li>
-    <li><a href="mailto:tiwsau@gmail.com">Connect</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#credentials">Credentials</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section id="hero">
   <div class="hero-container">
-    <div class="hero-content">
-      <h1>Global <span>Infrastructure</span> Strategy.</h1>
-      <p class="hero-desc">Directing the physical foundation of global commerce. 15+ years of hyperscale leadership across North America, EMEA, and APAC.</p>
-    </div>
-    <div class="profile-frame">
-      <img src="profile.jpeg" alt="Saurabh Tiwari">
-    </div>
-  </div>
-</section>
-
-<section class="metrics">
-  <div class="metric-item">
-    <h2>100%</h2>
-    <p>Availability Standard </p>
-  </div>
-  <div class="metric-item">
-    <h2>$XXXM</h2>
-    <p>Portfolio Strategy [cite: 12, 14, 25]</p>
-  </div>
-  <div class="metric-item">
-    <h2>6+</h2>
-    <p>Global Markets </p>
-  </div>
-  <div class="metric-item">
-    <h2>15yr</h2>
-    <p>Operational Mastery </p>
-  </div>
-</section>
-
-<section class="section" id="impact">
-  <span class="label">Strategic Impact</span>
-  <div class="impact-grid">
-    <div class="impact-item">
-      <h3>Governance at Scale</h3>
-      <p>Architected the global operating framework for Visa’s data center footprint, standardizing operational readiness across emerging and established regions[cite: 8, 22].</p>
-    </div>
-    <div class="impact-item">
-      <h3>Capital Investment</h3>
-      <p>Partnering with senior leadership to guide long-term infrastructure roadmaps through demand modeling and scenario analysis[cite: 9, 25].</p>
+    <div class="hero-headline">Global Data Center Governance, Strategy & Operations</div>
+    <h1 class="hero-name">Saurabh Tiwari</h1>
+    <div class="hero-grid">
+      <p class="hero-desc">
+        Enterprise infrastructure executive shaping how <strong>mission-critical environments scale with discipline, resilience, and executive clarity.</strong> Brings a rare blend of data center operations, governance, portfolio planning, audit readiness, and business strategy—translating complex infrastructure decisions into measurable business outcomes.
+      </p>
+      <div style="text-align: right;">
+        <img src="profile.jpeg" alt="Saurabh Tiwari" style="width: 320px; filter: grayscale(100%); border: 1px solid var(--border);">
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="history">
-  <span class="label">Professional Chronicle</span>
-  
-  <div class="career-row">
-    <div class="career-meta">2022 — Present [cite: 20]</div>
-    <div class="career-body">
-      <h3>Director, Lead Business Planning [cite: 17]</h3>
-      <h4>Visa Inc. | Denver, CO [cite: 18, 20]</h4>
-      <ul>
-        <li>Expanding global data center footprints through coordinated capacity modeling and investment strategy[cite: 21].</li>
-        <li>Overseeing the full lifecycle of infrastructure programs, from site selection to operational readiness[cite: 23].</li>
-        <li>Directing the global DCIM program to drive capacity insights and portfolio-wide monitoring[cite: 26].</li>
-      </ul>
+<section class="stats-strip">
+  <div class="stats-container">
+    <div class="stat-box">
+      <div class="stat-val">15+</div>
+      <div class="stat-lab">Years in Global<br>Infrastructure</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-val">100%</div>
+      <div class="stat-lab">Uptime and Compliance<br>Track Record</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-val">3 / 6+</div>
+      <div class="stat-lab">Regions Led /<br>Global Markets</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-val">11+</div>
+      <div class="stat-lab">Years at Visa Building<br>Global Capability</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <span class="label">Executive Summary</span>
+  <div class="summary-grid">
+    <h2 class="summary-title">Where Strategy<br>Meets Execution.</h2>
+    <div class="summary-text">
+      <p>I lead global data center strategy, governance, and operations for enterprise-scale infrastructure environments where resilience, compliance, and disciplined growth are non-negotiable[cite: 7, 8, 9, 10].</p>
+      <p>Over the past 15+ years, I have built, governed, and operated mission-critical data center portfolios across North America, APAC, and EMEA—helping organizations scale infrastructure with stronger standards, clearer decision frameworks, and sustained operational performance[cite: 7, 8, 12, 14].</p>
+      <p>My work sits at the intersection of engineering, financial planning, compliance, and executive strategy. I bring structure to complex environments, align infrastructure investments with business priorities, and help leadership teams make high-consequence decisions with greater confidence[cite: 9, 10, 25, 47].</p>
     </div>
   </div>
 
-  <div class="career-row">
-    <div class="career-meta">2021 — 2022 [cite: 30]</div>
-    <div class="career-body">
-      <h3>Director, India & Turkey [cite: 28]</h3>
-      <h4>Visa Inc. | Data Center Delivery & Ops [cite: 28, 29]</h4>
-      <ul>
-        <li>Led Tier III+ hyperscale environments supporting APAC and EMEA workloads with 100% SLA[cite: 31, 32].</li>
-        <li>Managed four production facilities, achieving zero service interruptions during commissioning and steady-state transition[cite: 32, 33].</li>
-        <li>Engineered high-performing teams of 21 engineers focused on accountability and psychological safety[cite: 35].</li>
-      </ul>
+  <div class="pillar-grid">
+    <div class="pillar-card">
+      <h3>Portfolio Strategy</h3>
+      <p>Long-range infrastructure planning, demand modeling, and investment prioritization[cite: 12, 14, 21, 25].</p>
+    </div>
+    <div class="pillar-card">
+      <h3>Governance & Risk</h3>
+      <p>Audit readiness, operational control frameworks, and enterprise-grade compliance oversight[cite: 8, 14, 15, 27].</p>
+    </div>
+    <div class="pillar-card">
+      <h3>Global Operations</h3>
+      <p>Scalable operating standards, resilience planning, and execution across regions and teams[cite: 7, 8, 14, 22].</p>
     </div>
   </div>
+</section>
+
+<section class="section" id="experience">
+  <span class="label">Career Experience</span>
+  <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1rem;">Built through operational depth,<br>now defined by executive range.</h2>
+  <p style="color: var(--text-dim); margin-bottom: 5rem;">A progression from engineering and operational rigor into enterprise governance, portfolio leadership, and strategic infrastructure decision-making.</p>
 
   <div class="career-row">
-    <div class="career-meta">2018 — 2021 [cite: 37]</div>
+    <div class="career-year">2022 — PRESENT</div>
     <div class="career-body">
-      <h3>Data Center Manager [cite: 36]</h3>
-      <h4>Visa Inc. | Singapore & Indonesia [cite: 36, 37]</h4>
-      <ul>
-        <li>Maintained zero SLA violations across mission-critical facilities with 2MW+ load[cite: 38].</li>
-        <li>Delivered $750K in annual OpEx savings via strategic site decommissioning during the COVID-19 pandemic[cite: 41].</li>
-      </ul>
+      <h3>Visa Inc.</h3>
+      <h4>Director, Lead Business Planning – DCEO Business Operations</h4>
+      <p>Leads global data center portfolio strategy, governance, and expansion planning across enterprise infrastructure environments. Shapes investment decisions, operating standards, commercial governance, and risk frameworks that improve portfolio visibility and execution discipline at scale[cite: 17, 21, 22, 23, 24, 25, 27].</p>
+      <div class="tag-cloud">
+        <div class="tag">Global Governance</div><div class="tag">Expansion Strategy</div><div class="tag">Contract & SLA Leadership</div>
+        <div class="tag">Risk & Compliance</div><div class="tag">Executive Decision Support</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="career-row">
+    <div class="career-year">2021 — 2022</div>
+    <div class="career-body">
+      <h3>Visa Inc.</h3>
+      <h4>Director, India & Turkey – Data Center Delivery & Operations</h4>
+      <p>Directed Tier III+ data center operations across India and Turkey supporting regional enterprise workloads. Led multi-site delivery and operations with 100% SLA and uptime performance while scaling cross-regional engineering capability and operational consistency[cite: 28, 30, 31, 32, 33, 35].</p>
+      <div class="tag-cloud">
+        <div class="tag">Tier III+ Operations</div><div class="tag">100% SLA</div><div class="tag">Cross-Regional Leadership</div><div class="tag">Operational Scale</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="career-row">
+    <div class="career-year">2018 — 2021</div>
+    <div class="career-body">
+      <h3>Visa Inc.</h3>
+      <h4>Data Center Manager – Singapore & Indonesia</h4>
+      <p>Managed mission-critical operations across regional facilities while delivering new colocation capacity and optimizing portfolio efficiency. Combined operational resilience with financial discipline, including significant savings through footprint rationalization during a volatile period[cite: 36, 37, 38, 39, 41].</p>
+      <div class="tag-cloud">
+        <div class="tag">Regional Operations</div><div class="tag">Colocation Delivery</div><div class="tag">Cost Optimization</div><div class="tag">Business Continuity</div>
+      </div>
     </div>
   </div>
 </section>
 
-<footer>
-  <div class="nav-logo">ST / 2026</div>
-  <a href="mailto:tiwsau@gmail.com" class="contact-btn">Initiate Connection</a>
+<section class="section" id="credentials">
+  <span class="label">Credentials</span>
+  <div class="summary-grid">
+    <div class="career-body">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem;">Education & Development</h3>
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--gold);">MBA</h4>
+        <p>Boston University Questrom School of Business [cite: 63]</p>
+      </div>
+      <div style="margin-bottom: 2rem;">
+        <h4 style="color: var(--gold);">MS, Industrial Engineering</h4>
+        <p>Southern Illinois University Edwardsville [cite: 64]</p>
+      </div>
+      <div>
+        <h4 style="color: var(--gold);">Executive Education</h4>
+        <p>Harvard Business School CORe · INSEAD · UT Austin [cite: 66, 67]</p>
+      </div>
+    </div>
+    <div class="tag-cloud" style="align-content: center;">
+      <div class="tag">Global Portfolio Planning</div><div class="tag">Audit & Compliance</div><div class="tag">Operational Standards</div>
+      <div class="tag">Capital Strategy</div><div class="tag">Executive Reporting</div><div class="tag">Cross-Regional Leadership</div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <span class="label">Initiate Connection</span>
+  <a href="mailto:tiwsau@gmail.com" class="contact-link">tiwsau@gmail.com</a>
+  <div style="color: var(--text-dim); letter-spacing: 0.1em; font-size: 0.8rem;">
+    DENVER, COLORADO | (303) 981-2914 | LINKEDIN
+  </div>
 </footer>
 
 </body>
